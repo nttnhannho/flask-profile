@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nhan Nguyen's Profile</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  </head>
-  <body>
+{% extends "base.html" %}
+
+{% block title %}Nhan Nguyen's Profile{% endblock %}
+
+{% block body %}
   <section class="section has-text-centered">
     <figure class="image container is-128x128 mb-4">
       <img class="is-rounded"
@@ -14,8 +10,9 @@
     </figure>
     <p class="title">Nhan Nguyen</p>
     <p class="subtitle">@nttnhannho</p>
-    <a class="button is-info is-outlined is-rounded" href="#">Contact</a>
-    <a class="button is-dark is-outlined is-rounded" href="#">Github</a>
+    <a class="button is-info is-outlined is-rounded" href="{{ url_for('contact') }}">Contact</a>
+    <a class="button is-dark is-outlined is-rounded"
+       href="https://github.com/nttnhannho" target="_blank" rel="noopener noreferrer">Github</a>
   </section>
   <section class="columns">
     <div class="column is-three-fifths is-offset-one-fifth has-background-light">
@@ -51,5 +48,4 @@
       </div>
     </div>
   </section>
-  </body>
-</html>
+{% endblock %}
